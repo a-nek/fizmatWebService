@@ -6,10 +6,7 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="95fbcdaa-d1f6-436d-9dc1-bd95441bacb7" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/out/production/FizmatBrsuWebService/webApplication/Main.class" afterPath="$PROJECT_DIR$/out/production/FizmatBrsuWebService/webApplication/Main.class" />
-    </list>
+    <list default="true" id="95fbcdaa-d1f6-436d-9dc1-bd95441bacb7" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -20,64 +17,113 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Kernel8.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/webApplication/mathematicalModel/kernel/Kernel8.java">
+      <file leaf-file-name="Kernel7.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/webApplication/mathematicalModel/kernel/Kernel7.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="131">
-              <caret line="9" column="0" lean-forward="true" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+            <state relative-caret-position="-7">
+              <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
               <folding>
                 <element signature="e#202#203#0" expanded="true" />
-                <element signature="e#237#238#0" expanded="true" />
+                <element signature="e#258#259#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Kernel2.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/webApplication/mathematicalModel/kernel/Kernel2.java">
+      <file leaf-file-name="X1.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/webApplication/mathematicalModel/x/X1.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="8" column="25" lean-forward="true" selection-start-line="8" selection-start-column="25" selection-end-line="8" selection-end-column="25" />
+            <state relative-caret-position="112">
+              <caret line="7" column="16" lean-forward="false" selection-start-line="7" selection-start-column="16" selection-end-line="7" selection-end-column="16" />
+              <folding>
+                <element signature="e#166#167#0" expanded="true" />
+                <element signature="e#190#191#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="X2.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/webApplication/mathematicalModel/x/X2.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="112">
+              <caret line="7" column="18" lean-forward="false" selection-start-line="7" selection-start-column="18" selection-end-line="7" selection-end-column="18" />
+              <folding>
+                <element signature="e#167#168#0" expanded="true" />
+                <element signature="e#193#194#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="X3.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/webApplication/mathematicalModel/x/X3.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="112">
+              <caret line="7" column="51" lean-forward="false" selection-start-line="7" selection-start-column="51" selection-end-line="7" selection-end-column="51" />
+              <folding>
+                <element signature="e#167#168#0" expanded="true" />
+                <element signature="e#227#228#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="X4.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/webApplication/mathematicalModel/x/X4.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="112">
+              <caret line="7" column="32" lean-forward="false" selection-start-line="7" selection-start-column="32" selection-end-line="7" selection-end-column="32" />
+              <folding>
+                <element signature="e#167#168#0" expanded="true" />
+                <element signature="e#210#211#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="X5.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/webApplication/mathematicalModel/x/X5.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="80">
+              <caret line="5" column="13" lean-forward="true" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+              <folding>
+                <element signature="e#167#168#0" expanded="true" />
+                <element signature="e#191#192#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="X6.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/webApplication/mathematicalModel/x/X6.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="112">
+              <caret line="7" column="24" lean-forward="false" selection-start-line="7" selection-start-column="24" selection-end-line="7" selection-end-column="24" />
+              <folding>
+                <element signature="e#167#168#0" expanded="true" />
+                <element signature="e#199#200#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="X7.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/webApplication/mathematicalModel/x/X7.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="112">
+              <caret line="7" column="93" lean-forward="false" selection-start-line="7" selection-start-column="93" selection-end-line="7" selection-end-column="93" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Kernel4.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/webApplication/mathematicalModel/kernel/Kernel4.java">
+      <file leaf-file-name="Y7.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/webApplication/mathematicalModel/y/Y7.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="13" column="9" lean-forward="false" selection-start-line="6" selection-start-column="4" selection-end-line="17" selection-end-column="5" />
-              <folding>
-                <element signature="e#203#204#0" expanded="true" />
-                <element signature="e#238#239#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Kernel6.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/webApplication/mathematicalModel/kernel/Kernel6.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="216">
-              <caret line="14" column="47" lean-forward="false" selection-start-line="14" selection-start-column="47" selection-end-line="14" selection-end-column="47" />
-              <folding>
-                <element signature="e#202#203#0" expanded="true" />
-                <element signature="e#237#238#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Kernel7.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/webApplication/mathematicalModel/kernel/Kernel7.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="10" column="0" lean-forward="true" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
-              <folding>
-                <element signature="e#202#203#0" expanded="true" />
-                <element signature="e#258#259#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="144">
+              <caret line="12" column="75" lean-forward="true" selection-start-line="12" selection-start-column="15" selection-end-line="12" selection-end-column="75" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -125,6 +171,14 @@
         <option value="$PROJECT_DIR$/src/webApplication/mathematicalModel/y/Y6.java" />
         <option value="$PROJECT_DIR$/src/webApplication/mathematicalModel/y/Y7.java" />
         <option value="$PROJECT_DIR$/src/webApplication/mathematicalModel/y/Y8.java" />
+        <option value="$PROJECT_DIR$/src/webApplication/mathematicalModel/x/X1.java" />
+        <option value="$PROJECT_DIR$/src/webApplication/mathematicalModel/x/X2.java" />
+        <option value="$PROJECT_DIR$/src/webApplication/mathematicalModel/x/X3.java" />
+        <option value="$PROJECT_DIR$/src/webApplication/mathematicalModel/x/X4.java" />
+        <option value="$PROJECT_DIR$/src/webApplication/mathematicalModel/x/X5.java" />
+        <option value="$PROJECT_DIR$/src/webApplication/mathematicalModel/x/X6.java" />
+        <option value="$PROJECT_DIR$/src/webApplication/mathematicalModel/x/X7.java" />
+        <option value="$PROJECT_DIR$/src/webApplication/mathematicalModel/x/X8.java" />
       </list>
     </option>
   </component>
@@ -238,6 +292,48 @@
             <path>
               <item name="FizmatBrsuWebService" type="b2602c69:ProjectViewProjectNode" />
               <item name="FizmatBrsuWebService" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="webApplication" type="462c0819:PsiDirectoryNode" />
+              <item name="mathematicalModel" type="462c0819:PsiDirectoryNode" />
+              <item name="kernel" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="FizmatBrsuWebService" type="b2602c69:ProjectViewProjectNode" />
+              <item name="FizmatBrsuWebService" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="webApplication" type="462c0819:PsiDirectoryNode" />
+              <item name="mathematicalModel" type="462c0819:PsiDirectoryNode" />
+              <item name="method" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="FizmatBrsuWebService" type="b2602c69:ProjectViewProjectNode" />
+              <item name="FizmatBrsuWebService" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="webApplication" type="462c0819:PsiDirectoryNode" />
+              <item name="mathematicalModel" type="462c0819:PsiDirectoryNode" />
+              <item name="method" type="462c0819:PsiDirectoryNode" />
+              <item name="alternatingStep" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="FizmatBrsuWebService" type="b2602c69:ProjectViewProjectNode" />
+              <item name="FizmatBrsuWebService" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="webApplication" type="462c0819:PsiDirectoryNode" />
+              <item name="mathematicalModel" type="462c0819:PsiDirectoryNode" />
+              <item name="method" type="462c0819:PsiDirectoryNode" />
+              <item name="explicitMethod1" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="FizmatBrsuWebService" type="b2602c69:ProjectViewProjectNode" />
+              <item name="FizmatBrsuWebService" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="webApplication" type="462c0819:PsiDirectoryNode" />
+              <item name="mathematicalModel" type="462c0819:PsiDirectoryNode" />
+              <item name="x" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="FizmatBrsuWebService" type="b2602c69:ProjectViewProjectNode" />
+              <item name="FizmatBrsuWebService" type="462c0819:PsiDirectoryNode" />
               <item name="web" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -263,6 +359,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -438,12 +535,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1519740435904</updated>
-      <workItem from="1519740444705" duration="7911000" />
+      <workItem from="1519740444705" duration="9941000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="7911000" />
+    <option name="totallyTimeSpent" value="9941000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -582,8 +679,8 @@
         <state relative-caret-position="73">
           <caret line="7" column="16" lean-forward="false" selection-start-line="7" selection-start-column="16" selection-end-line="7" selection-end-column="16" />
           <folding>
-            <element signature="e#202#203#0" expanded="true" />
-            <element signature="e#237#238#0" expanded="true" />
+            <element signature="e#202#203#0" expanded="false" />
+            <element signature="e#237#238#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -593,8 +690,8 @@
         <state relative-caret-position="-43">
           <caret line="7" column="26" lean-forward="false" selection-start-line="7" selection-start-column="26" selection-end-line="7" selection-end-column="26" />
           <folding>
-            <element signature="e#203#204#0" expanded="true" />
-            <element signature="e#238#239#0" expanded="true" />
+            <element signature="e#203#204#0" expanded="false" />
+            <element signature="e#238#239#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -604,17 +701,6 @@
         <state relative-caret-position="68">
           <caret line="4" column="17" lean-forward="false" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/webApplication/mathematicalModel/kernel/Kernel11.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="36" lean-forward="false" selection-start-line="7" selection-start-column="36" selection-end-line="7" selection-end-column="36" />
-          <folding>
-            <element signature="e#203#204#0" expanded="true" />
-            <element signature="e#249#250#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -666,14 +752,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/webApplication/mathematicalModel/y/Y7.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="75" lean-forward="true" selection-start-line="12" selection-start-column="15" selection-end-line="12" selection-end-column="75" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/webApplication/mathematicalModel/y/Y8.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="221">
@@ -684,8 +762,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/webApplication/mathematicalModel/kernel/Kernel8.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="131">
-          <caret line="9" column="0" lean-forward="true" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+        <state relative-caret-position="-7">
+          <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
           <folding>
             <element signature="e#202#203#0" expanded="true" />
             <element signature="e#237#238#0" expanded="true" />
@@ -695,15 +773,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/webApplication/mathematicalModel/kernel/Kernel2.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="8" column="25" lean-forward="true" selection-start-line="8" selection-start-column="25" selection-end-line="8" selection-end-column="25" />
+        <state relative-caret-position="-7">
+          <caret line="8" column="25" lean-forward="false" selection-start-line="8" selection-start-column="25" selection-end-line="8" selection-end-column="25" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/webApplication/mathematicalModel/kernel/Kernel4.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
+        <state relative-caret-position="-7">
           <caret line="13" column="9" lean-forward="false" selection-start-line="6" selection-start-column="4" selection-end-line="17" selection-end-column="5" />
           <folding>
             <element signature="e#203#204#0" expanded="true" />
@@ -714,7 +792,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/webApplication/mathematicalModel/kernel/Kernel6.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
+        <state relative-caret-position="-7">
           <caret line="14" column="47" lean-forward="false" selection-start-line="14" selection-start-column="47" selection-end-line="14" selection-end-column="47" />
           <folding>
             <element signature="e#202#203#0" expanded="true" />
@@ -725,12 +803,110 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/webApplication/mathematicalModel/kernel/Kernel7.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="0" lean-forward="true" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+        <state relative-caret-position="-7">
+          <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
           <folding>
             <element signature="e#202#203#0" expanded="true" />
             <element signature="e#258#259#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/webApplication/mathematicalModel/kernel/Kernel11.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="96">
+          <caret line="6" column="13" lean-forward="false" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/webApplication/mathematicalModel/x/X1.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="112">
+          <caret line="7" column="16" lean-forward="false" selection-start-line="7" selection-start-column="16" selection-end-line="7" selection-end-column="16" />
+          <folding>
+            <element signature="e#166#167#0" expanded="true" />
+            <element signature="e#190#191#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/webApplication/mathematicalModel/x/X2.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="112">
+          <caret line="7" column="18" lean-forward="false" selection-start-line="7" selection-start-column="18" selection-end-line="7" selection-end-column="18" />
+          <folding>
+            <element signature="e#167#168#0" expanded="true" />
+            <element signature="e#193#194#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/webApplication/mathematicalModel/x/X3.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="112">
+          <caret line="7" column="51" lean-forward="false" selection-start-line="7" selection-start-column="51" selection-end-line="7" selection-end-column="51" />
+          <folding>
+            <element signature="e#167#168#0" expanded="true" />
+            <element signature="e#227#228#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/webApplication/mathematicalModel/x/X4.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="112">
+          <caret line="7" column="32" lean-forward="false" selection-start-line="7" selection-start-column="32" selection-end-line="7" selection-end-column="32" />
+          <folding>
+            <element signature="e#167#168#0" expanded="true" />
+            <element signature="e#210#211#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/webApplication/mathematicalModel/x/X5.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="80">
+          <caret line="5" column="13" lean-forward="true" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+          <folding>
+            <element signature="e#167#168#0" expanded="true" />
+            <element signature="e#191#192#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/webApplication/mathematicalModel/x/X6.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="112">
+          <caret line="7" column="24" lean-forward="false" selection-start-line="7" selection-start-column="24" selection-end-line="7" selection-end-column="24" />
+          <folding>
+            <element signature="e#167#168#0" expanded="true" />
+            <element signature="e#199#200#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/webApplication/mathematicalModel/y/Y7.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="12" column="75" lean-forward="true" selection-start-line="12" selection-start-column="15" selection-end-line="12" selection-end-column="75" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/webApplication/mathematicalModel/x/X8.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="256">
+          <caret line="16" column="12" lean-forward="false" selection-start-line="16" selection-start-column="12" selection-end-line="16" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/webApplication/mathematicalModel/x/X7.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="112">
+          <caret line="7" column="93" lean-forward="false" selection-start-line="7" selection-start-column="93" selection-end-line="7" selection-end-column="93" />
+          <folding />
         </state>
       </provider>
     </entry>
