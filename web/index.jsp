@@ -13,7 +13,7 @@
         <option value="4">Двухшаговый явный метод</option>
         <option value="5">Явный метод с попеременно чередующимся шагом</option>
         <option value="6">Неявный метод 1</option>
-        <option value="7">Неявный метод 2</option>
+        <option value="7" style="background-image: url(http://www.cleverstudents.ru/integral/images/method_of_trapezoids/014.png);">Неявный метод 2</option>
       </select>
     </form>
   </body>
