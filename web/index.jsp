@@ -5,9 +5,9 @@
     <title></title>
   </head>
   <body>
-    <form action="">
+    <form action="/formcontroller">
 
-      <select name="" id="method">
+      <select name="method" id="method">
         <option value="1">Метод Ландвебера (МПИ)</option>
         <option value="2">Явный метод 1</option>
         <option value="3">Явный метод 2</option>
@@ -17,7 +17,7 @@
         <option value="7">Неявный метод 2</option>
       </select>
 
-      <select name="" id="kernel">
+      <select name="kernel" id="kernel">
         <option value="">Ядро1</option>
         <option value="">Ядро2</option>
         <option value="">Ядро3</option>
@@ -31,7 +31,7 @@
         <option value="">Ядро11</option>
       </select>
 
-      <select name="" id="x">
+      <select name="x" id="x">
         <option value="1">x1</option>
         <option value="2">x2</option>
         <option value="3">x3</option>
@@ -41,7 +41,7 @@
         <option value="7">x7</option>
       </select>
 
-      <select name="" id="y">
+      <select name="y" id="y">
         <option value="1">y1</option>
         <option value="2">y2</option>
         <option value="3">y3</option>
@@ -53,11 +53,12 @@
         <option value="9">y9</option>
       </select>
 
-      <select name="" id="delta">
-        <option value="-3">0,001</option>
-        <option value="-4">0,0001</option>
+      <select name="delta" id="delta">
+        <option value="0.001">0,001</option>
+        <option value="0.0001">0,0001</option>
       </select>
 
+      <input type="submit" name="submit" value="Решить">
 
     </form>
   </body>
