@@ -1,10 +1,7 @@
 package webApplication.controller;
 
 import webApplication.exceptions.IncorrectNumber;
-import webApplication.mathematicalModel.Kernel;
-import webApplication.mathematicalModel.Method;
-import webApplication.mathematicalModel.X;
-import webApplication.mathematicalModel.Y;
+import webApplication.mathematicalModel.*;
 import webApplication.mathematicalModel.kernel.*;
 import webApplication.mathematicalModel.x.*;
 import webApplication.mathematicalModel.y.*;
@@ -34,7 +31,8 @@ public class MainFormController extends HttpServlet{
         String y = req.getParameter("y");
         String delta = req.getParameter("delta");
 
-        Method m;
+        Method m = numberToMethod(method);
+        m.calculate(numberToKernel(kernel), numberToX(x), numberToY(y), new Options(parseDouble(delta)));
 
     }
     // возвращает метод, который соотв. value из формы
