@@ -12,16 +12,16 @@ public class ExplicitMethod implements Method {
     double y1[] = new double[m];
 
     double xm[] = new double[m];
-
+    double delta;
     ResultTable result;
 
-    public void yApproximate(int k) {
+    public void yApproximate() {
         for (int i = 0; i < m; i++) {
-            y1[i] = ((int) (y[i] * Math.pow(10, k) + 0.5)) * (1. / Math.pow(10, k));
+            y1[i] = ((int) (y[i] * delta) + 0.5) * (1. / delta);
         }
     }
 
-    public void firstMethod(int k) {
+    public void firstMethod() {
         int n = 0;
         double h = 1. / m;
 
@@ -66,10 +66,10 @@ public class ExplicitMethod implements Method {
                 norma3 += Math.pow(x[i] - xp[i], 2) * h;
             }
             n++;
-        } while (Math.pow(norma1, 1. / 2) > 1.5 * Math.pow(10, (-1) * k));
+        } while (Math.pow(norma1, 1. / 2) > 1.5 * delta);
 
-      //  System.out.println("******************************Метод X(n+1) ********************************");
-      //  System.out.println("Узлы t[i]" + "\t" + "Правые части y[i]" + "\t" + "Точные решения x[i]" + "\t" + "Приближённые решения x*[i]");
+        //  System.out.println("******************************Метод X(n+1) ********************************");
+        //  System.out.println("Узлы t[i]" + "\t" + "Правые части y[i]" + "\t" + "Точные решения x[i]" + "\t" + "Приближённые решения x*[i]");
         result = new ResultTable(t, y, x, xm, Math.pow(norma1, 1. / 2), Math.pow(norma2, 1. / 2), Math.pow(norma3, 1. / 2));
 //        for (int i = 0; i < m; i++) {
 //            System.out.println(t[i] + "\t\t" + y[i] + "\t" + x[i] + "\t\t\t" + xm[i]);
@@ -84,6 +84,7 @@ public class ExplicitMethod implements Method {
 
     @Override
     public void calculate(Kernel kernel, X x, Y y, Options options) {
+        this.delta = options.getDelta();
         this.K = kernel;
         this.x = x;
         this.y = y;
