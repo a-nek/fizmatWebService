@@ -5,7 +5,7 @@
     <title></title>
   </head>
   <body>
-    <form action="/formcontroller">
+    <form action="/formcontroller" method="post">
 
       <select name="method" id="method">
         <option value="1">Метод Ландвебера (МПИ)</option>
