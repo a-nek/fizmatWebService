@@ -5,5 +5,5 @@ package webApplication.mathematicalModel;
 public interface Y {
 
     public boolean isExist();
-    public double getY(double[] t);
+    public double getY(double t);
 }

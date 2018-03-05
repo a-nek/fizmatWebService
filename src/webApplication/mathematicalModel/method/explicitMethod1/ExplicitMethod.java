@@ -85,11 +85,11 @@ public class ExplicitMethod implements Method {
     @Override
     public void calculate(Kernel kernel, X x, Y y, Options options) {
         this.delta = options.getDelta();
-        this.K = kernel;
-        this.x = x;
-        this.y = y;
-        yApproximate(k);
-        firstMethod(k);
+        //this.K = kernel;
+        //this.x = x;
+        //this.y = y;
+        //yApproximate(k);
+        //firstMethod(k);
 
     }
 

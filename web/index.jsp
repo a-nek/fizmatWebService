@@ -18,17 +18,17 @@
       </select>
 
       <select name="kernel" id="kernel">
-        <option value="">Ядро1</option>
-        <option value="">Ядро2</option>
-        <option value="">Ядро3</option>
-        <option value="">Ядро4</option>
-        <option value="">Ядро5</option>
-        <option value="">Ядро6</option>
-        <option value="">Ядро7</option>
-        <option value="">Ядро8</option>
-        <option value="">Ядро9</option>
-        <option value="">Ядро10</option>
-        <option value="">Ядро11</option>
+        <option value="1">Ядро1</option>
+        <option value="2">Ядро2</option>
+        <option value="3">Ядро3</option>
+        <option value="4">Ядро4</option>
+        <option value="5">Ядро5</option>
+        <option value="6">Ядро6</option>
+        <option value="7">Ядро7</option>
+        <option value="8">Ядро8</option>
+        <option value="9">Ядро9</option>
+        <option value="10">Ядро10</option>
+        <option value="11">Ядро11</option>
       </select>
 
       <select name="x" id="x">
