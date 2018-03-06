@@ -3,8 +3,8 @@
 *.iws
 *.ipr
 .idea/
+/.idea/
 /out/
-
 # NetBeans specific
 nbproject/private/
 build/

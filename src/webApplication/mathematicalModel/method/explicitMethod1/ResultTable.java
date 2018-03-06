@@ -41,6 +41,11 @@ public class ResultTable implements Result {
     }
 
     @Override
+    public int getNumberOfIterations() {
+        return 0;
+    }
+
+    @Override
     public double getNorm1() {
         return norm1;
     }
