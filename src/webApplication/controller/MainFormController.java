@@ -1,12 +1,18 @@
 package webApplication.controller;
 
+import com.google.gson.Gson;
+import org.knowm.xchart.BitmapEncoder;
+import org.knowm.xchart.QuickChart;
+import org.knowm.xchart.SwingWrapper;
+import org.knowm.xchart.XYChart;
 import webApplication.exceptions.IncorrectNumber;
 import webApplication.mathematicalModel.*;
 import webApplication.mathematicalModel.kernel.*;
+import webApplication.mathematicalModel.method.test.ResultTest;
 import webApplication.mathematicalModel.x.*;
 import webApplication.mathematicalModel.y.*;
+import webApplication.utility.JsonEncoder;
 
-import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -24,7 +30,8 @@ public class MainFormController extends HttpServlet{
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        // получаем значения полей формы
+
+        // получаем значения value из полей формы
         String method = req.getParameter("method");
         String kernel = req.getParameter("kernel");
         String x = req.getParameter("x");
@@ -37,8 +44,22 @@ public class MainFormController extends HttpServlet{
         System.out.println(y);
         System.out.println(delta);
 
+        try {
+            Thread.sleep(2000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+
         //Method m = numberToMethod(method);
         //m.calculate(numberToKernel(kernel), numberToX(x), numberToY(y), new Options(parseDouble(delta)));
+
+        Result result = new ResultTest();
+        String json = new JsonEncoder().toJson(result);
+
+        resp.getWriter().write(json);
+        resp.getWriter().flush();
+        resp.getWriter().close();
+
 
     }
     // возвращает метод, который соотв. value из формы
