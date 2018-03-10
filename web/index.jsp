@@ -2,10 +2,42 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
   <head>
-    <title></title>
+    <title>fws</title>
+
+    <!-- Подключение jQuery -->
+    <script src="lib/js/jquery-3.3.1.js"></script>
+
+    <script>
+      $(document).ready(function () {
+          $("#submit_btn").bind("click", function () {
+              $.ajax({
+                  url: "/formcontroller",
+                  type: "post",
+                  data: ({
+                      method: $("select[name='method']").val(),
+                      kernel: $("select[name='kernel']").val(),
+                      x: $("select[name='x']").val(),
+                      y: $("select[name='y']").val(),
+                      delta: $("select[name='delta']").val()
+                  }),
+                  success: function (data) {
+                      // парсим json и записываем данные в таблицу
+                      data = JSON.parse(data);
+                      var methodSolution = data.methodSolution;
+                      for(var val in methodSolution){
+                            $("#msg").append("->" + methodSolution[val] + "<br>");
+                      }
+                      alert(a);
+                  }
+              })
+          });
+      });
+    </script>
+
   </head>
   <body>
-    <form action="/formcontroller" method="post">
+
+    <form action="" method="">
 
       <select name="method" id="method">
         <option value="1">Метод Ландвебера (МПИ)</option>
@@ -58,8 +90,8 @@
         <option value="0.0001">0,0001</option>
       </select>
 
-      <input type="submit" name="submit" value="Решить">
-
+      <input id="submit_btn" type="button" name="submit" value="Решить" style="cursor:pointer">
     </form>
+    <div id="msg"></div>
   </body>
 </html>
