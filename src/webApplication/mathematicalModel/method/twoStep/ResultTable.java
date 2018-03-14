@@ -27,8 +27,8 @@ public class ResultTable implements Result{
     }
 
     @Override
-    public double[] getNumberOfIterations() {
-        return new double[0];
+    public int getNumberOfIterations() {
+        return 0;
     }
 
     @Override

@@ -7,6 +7,7 @@
     <!-- Подключение jQuery -->
     <script src="lib/js/jquery-3.3.1.js"></script>
 
+    <!-- Отправка данных формы контроллеру и построение таблицы с результатом решения -->
     <script>
       $(document).ready(function () {
           $("#submit_btn").bind("click", function () {
@@ -21,19 +22,69 @@
                       delta: $("select[name='delta']").val()
                   }),
                   success: function (data) {
+
                       // парсим json и записываем данные в таблицу
                       data = JSON.parse(data);
+
+                      // выдергиваем данные из json
                       var methodSolution = data.methodSolution;
+                      var exactSolution = data.exactSolution;
+                      var rightParts = data.rightParts;
+                      var points = data.points;
+
+                      var numberOfIterations = data.numberOfIterations;
+                      var norm1 = data.norm1;
+                      var norm2 = data.norm2;
+                      var norm3 = data.norm3;
+
+                      $("#table").show();
+                      $("#table tbody").empty(); // удаляем все из блока, на случай, если не первый запрос
+                      $("#table thead tr:first th:last").text($("select[name='method'] option:selected").text()); // в первую строку последней колонки вставляем название выбранного метода
+
                       for(var val in methodSolution){
-                            $("#msg").append("->" + methodSolution[val] + "<br>");
+                          // заполняем таблицу
+                          $("#table tbody").append(
+                              "<tr> <td class='points'>" + points[val] + "</td> <td class='exactSolution'>" + exactSolution[val] + "</td> <td class='rightParts'>" + rightParts[val] + "</td> <td class='methodSolution'>" + methodSolution[val] + "</td> </tr>"
+                          );
                       }
-                      alert(a);
+
+                      $("#table tbody").append(
+                          "<tr> <td colspan='3'>norma1</td> <td>" + norm1 + "</td> </tr>" +
+                          "<tr> <td colspan='3'>norma2</td> <td>" + norm2 + "</td> </tr>" +
+                          "<tr> <td colspan='3'>norma3</td> <td>" + norm3 + "</td> </tr>" +
+                          "<tr> <td colspan='3'>Количество итераций</td> <td>" + numberOfIterations + "</td> </tr>"
+                      );
+
                   }
-              })
+              });
+
+
           });
       });
     </script>
 
+    <!-- Вычисление эпсилон по дельта -->
+    <script>
+      $(document).ready(function () {
+        $("#eps").text("Точность: " + 1.5 * parseFloat($("select[name='delta'] option:selected").val()) );
+
+          $("#delta").click(function () {
+              $("#eps").text("Точность: " + 1.5 * parseFloat($("select[name='delta'] option:selected").val()) );
+          });
+      });
+    </script>
+
+    <!-- Создает массив точек для построения графика -->
+    <script>
+      $(document).ready(function () {
+
+          $("#graf").click(function () {
+
+
+
+          });
+      });
+    </script>
   </head>
   <body>
 
@@ -90,8 +141,35 @@
         <option value="0.0001">0,0001</option>
       </select>
 
+      <label id="eps" for="delta"></label>
+
       <input id="submit_btn" type="button" name="submit" value="Решить" style="cursor:pointer">
+
     </form>
-    <div id="msg"></div>
+    <div id="table" style="display: none">
+        <table>
+
+          <thead>
+            <tr>
+              <th>Узлы t<sub>i</sub></th>
+              <th>Точное решение x<sub>i</sub></th>
+              <th>Приближенные правые части y<sub>i</sub></th>
+              <th></th>
+            </tr>
+          </thead>
+
+          <tbody>
+
+          </tbody>
+
+        </table>
+    </div>
+
+    <p id="graf" style="width:600px;height:300px;">График</p>
+
+    <div id="test">
+        q
+    </div>
+
   </body>
 </html>
