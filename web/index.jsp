@@ -7,9 +7,6 @@
     <!-- Подключение jQuery -->
     <script src="lib/js/jquery-3.3.1.js"></script>
 
-    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-
-
     <!-- Отправка данных формы контроллеру и построение таблицы с результатом решения -->
     <script>
         $(document).ready(function () {
@@ -40,13 +37,11 @@
                         var norm2 = data.norm2;
                         var norm3 = data.norm3;
 
-                        $("#table").show(); // отображаем таблицу
-                        $("#graf").show(); // отображаем кнопку построения графика
-
+                        $("#table").show();
                         $("#table tbody").empty(); // удаляем все из блока, на случай, если не первый запрос
                         $("#table thead tr:first th:last").text($("select[name='method'] option:selected").text()); // в первую строку последней колонки вставляем название выбранного метода
 
-                        for (var val in methodSolution) {
+                        for(var val in methodSolution){
                             // заполняем таблицу
                             $("#table tbody").append(
                                 "<tr> <td class='points'>" + points[val] + "</td> <td class='exactSolution'>" + exactSolution[val] + "</td> <td class='rightParts'>" + rightParts[val] + "</td> <td class='methodSolution'>" + methodSolution[val] + "</td> </tr>"
@@ -71,63 +66,22 @@
     <!-- Вычисление эпсилон по дельта -->
     <script>
         $(document).ready(function () {
-            // Вычисляется точность при загрузке страницы
-            $("#eps").text("Точность: " + 1.5 * parseFloat($("select[name='delta'] option:selected").val()));
+            $("#eps").text("Точность: " + 1.5 * parseFloat($("select[name='delta'] option:selected").val()) );
 
-            // вычисляется при каждом изменении эпсилон
             $("#delta").click(function () {
-                $("#eps").text("Точность: " + 1.5 * parseFloat($("select[name='delta'] option:selected").val()));
+                $("#eps").text("Точность: " + 1.5 * parseFloat($("select[name='delta'] option:selected").val()) );
             });
         });
     </script>
 
-    <!-- Создает массив точек для построения графика и строит его в блоке chart_div-->
+    <!-- Создает массив точек для построения графика -->
     <script>
         $(document).ready(function () {
 
             $("#graf").click(function () {
-                google.charts.load('current', {'packages': ['corechart']});
-                google.charts.setOnLoadCallback(drawChart);
 
-                // достаем точки из таблицы
-                var points = $(".points");
-                var exactSolution = $(".exactSolution");
-                var methodSolution = $(".methodSolution");
 
-                var arr = new Array();
-                arr[0] = ['Узлы', 'Точное решение', 'Метод'];
 
-                for (var i = 0; i < points.length; i++) { // длины массивов points, exactSolution, methodSolution равны
-                    var temp = new Array();
-
-                    temp[0] = parseFloat($(points[i]).text());
-                    temp[1] = parseFloat($(exactSolution[i]).text());
-                    temp[2] = parseFloat($(methodSolution[i]).text());
-                    //$("#graf").append("<br>" + temp[0] + "  " + temp[1]);
-                    arr[i + 1] = temp;
-                }
-
-                function drawChart() {
-                    var data = google.visualization.arrayToDataTable(arr/*[
-                      ['Year', 'Sales', 'Expenses'],
-                      ['2004',  1000,      400],
-                      ['2005',  1170,      460],
-                      ['2006',  660,       1120],
-                      ['2007',  1030,      540]
-                  ]*/);
-
-                    var options = {
-                        title: '',
-                        width: 700,
-                        height: 700,
-                        curveType: 'function',
-                        legend: {position: 'bottom'}
-                    };
-
-                    var chart = new google.visualization.LineChart(document.getElementById('chart_div'));
-
-                    chart.draw(data, options);
-                }
             });
         });
     </script>
@@ -211,9 +165,8 @@
     </table>
 </div>
 
-<button id="graf" style="display: none">Построить график</button>
+<p id="graf" style="width:600px;height:300px;">График</p>
 
-<div id="chart_div"></div>
-
-</body>
-</html>
+<div id="test">
+    q
+</div>
