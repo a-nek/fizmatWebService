@@ -117,7 +117,7 @@
                   ]*/);
 
                     var options = {
-                        title: 'Лол кек чебурек',
+                        title: '',
                         width: 700,
                         height: 700,
                         curveType: 'function',
