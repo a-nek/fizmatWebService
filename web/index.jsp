@@ -6,6 +6,7 @@
 
     <!-- Подключение jQuery -->
     <script src="lib/js/jquery-3.3.1.js"></script>
+    <script src="lib/js/selectbox.js"></script>
 
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
 
@@ -74,9 +75,14 @@
             // Вычисляется точность при загрузке страницы
             $("#eps").text("Точность: " + 1.5 * parseFloat($("select[name='delta'] option:selected").val()));
 
-            // вычисляется при каждом изменении эпсилон
+            /* вычисляется при каждом изменении эпсилон
+                т.к. при умножении 1.5 на 0.0001 накапливается погрешность
+                и в ответе получаем 0.00015000000000000001, то будем выполнять умножение на 1000,
+                а потом деление на 1000
+            */
             $("#delta").click(function () {
-                $("#eps").text("Точность: " + 1.5 * parseFloat($("select[name='delta'] option:selected").val()));
+                var eps = 1.5 * 1000 * parseFloat($("select[name='delta'] option:selected").val());
+                $("#eps").text("Точность: " + eps / 1000);
             });
         });
     </script>
@@ -131,12 +137,20 @@
             });
         });
     </script>
+    <script>
+        $(document).ready(function () {
+            $(".select > li:has(em)").map(function(index,elem){
+                return $("<option/>").attr("value","").html($("em", $(elem)).html());
+            }).appendTo('.selectoption');
+        });
+    </script>
 </head>
 <body>
 
 <form action="" method="">
 
     <select name="method" id="method">
+        <option value="1"></option>
         <option value="1">Метод Ландвебера (МПИ)</option>
         <option value="2">Явный метод 1</option>
         <option value="3">Явный метод 2</option>
@@ -214,6 +228,17 @@
 <button id="graf" style="display: none">Построить график</button>
 
 <div id="chart_div"></div>
+
+<select name="webmenu" id="webmenu">
+    <option value="calendar" data-image="icons/icon_calendar.gif">Calendar</option>
+    <option value="shopping_cart" data-image="icons/icon_cart.gif">Shopping Cart</option>
+    <option value="cd" data-image="icons/icon_cd.gif">CD</option>
+    <option value="email"  selected="selected" title="icons/icon_email.gif">Email</option>
+    <option value="faq" data-image="icons/icon_faq.gif">FAQ</option>
+    <option value="games" data-image="icons/icon_games.gif">Games</option>
+</select>
+
+
 
 </body>
 </html>
