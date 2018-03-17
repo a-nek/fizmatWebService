@@ -1,6 +1,7 @@
 package webApplication.mathematicalModel.method.alternatingStep;
 
 import webApplication.mathematicalModel.*;
+import webApplication.mathematicalModel.utility.RightRectangles;
 
 public class AlternatingStep implements Method {
     final double ALPHA = 0.8;
@@ -68,11 +69,9 @@ public class AlternatingStep implements Method {
         return t;
     }
 
-    private double[] createRightPart(Y exactY, double[] vector) {
-        for (int i = 0; i < m; i++) {
-            vector[i] = exactY.getY(i * h);
-        }
-        return vector;
+    private void createRightPart(Y y, double[] vector) {
+        for (int i = 0; i < m; i++)
+            vector[i] = y.getY(i * h);
     }
 
     private double[] createExactSolution() {
