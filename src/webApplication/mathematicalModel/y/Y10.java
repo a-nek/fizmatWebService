@@ -2,14 +2,14 @@ package webApplication.mathematicalModel.y;
 
 import webApplication.mathematicalModel.Y;
 
-public class Y9 implements Y {
+public class Y10 implements Y {
     @Override
     public boolean isExist() {
-        return true;
+        return false;
     }
 
     @Override
     public double getY(double t) {
-        return t * (t - 1) * (t * t - t - 1) / 12;
+        return 0;
     }
 }
