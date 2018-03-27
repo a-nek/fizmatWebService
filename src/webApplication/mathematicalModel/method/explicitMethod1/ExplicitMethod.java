@@ -1,96 +1,104 @@
 package webApplication.mathematicalModel.method.explicitMethod1;
 
 import webApplication.mathematicalModel.*;
+import webApplication.mathematicalModel.utility.RightRectangles;
 
 public class ExplicitMethod implements Method {
-    int m = 32;
-    double t[] = new double[m];
-    double K[][] = new double[m][m];
+    private int m;
+    private double h;
+    private double delta;
+    private double t[];
+    private double x[];
+    private double xExact[];
+    private double[] y;
+    private double yApprox[];
+    private X xModel;
+    private Kernel kernel;
+    private ResultTable result;
 
-    double y[] = new double[m];
-    double x[] = new double[m];
-    double y1[] = new double[m];
+    public ExplicitMethod() {
+        m = 32;
+        h = 1. / m;
+        t = new double[m];
+        x = new double[m];
+        y = new double[m];
+        xExact = new double[m];
+        yApprox = new double[m];
+        setT();
+    }
 
-    double xm[] = new double[m];
-    double delta;
-    ResultTable result;
-
-    public void yApproximate() {
+    private void yApproximate() {
         for (int i = 0; i < m; i++) {
-            y1[i] = ((int) (y[i] * delta) + 0.5) * (1. / delta);
+            yApprox[i] = ((int) (y[i] / delta) + 0.5) * delta;
         }
     }
 
-    public void firstMethod() {
+    private void solutionMethod() {
         int n = 0;
-        double h = 1. / m;
-
-        double xp[] = new double[m];
-        double sum1[] = new double[m];
-        double sum2[] = new double[m];
-        double sum3[] = new double[m];
-        double sum4[] = new double[m];
-        double norma1, norma2, norma3;
-        double l = 0.8;
-
-        for (int i = 0; i < m; i++) {
-            xm[i] = 0;
-        }
+        double xPrevious[] = new double[m];
+        double sum1, sum2, sum3, sum4;
+        double norm1, norm2, norm3;
+        double alpha = 0.8;
 
         do {
-            norma1 = 0;
-            norma2 = 0;
-            norma3 = 0;
+            norm1 = 0;
+            norm2 = 0;
+            norm3 = 0;
+            System.arraycopy(x, 0, xPrevious, 0, m);
             for (int i = 0; i < m; i++) {
-                xp[i] = xm[i];
-                sum1[i] = 0;
-                sum2[i] = 0;
-                sum3[i] = 0;
-                sum4[i] = 0;
-            }
-
-            for (int i = 0; i < m; i++) {
-
+                sum1 = 0;
+                sum2 = 0;
+                sum3 = 0;
+                sum4 = 0;
                 for (int j = 0; j < m; j++) {
-                    for (int t = 0; t < m; t++) {
-                        sum1[j] += K[j][t] * h * xp[t];
+                    for (int k = 0; k < m; k++) {
+                        sum1 += kernel.getKernel(t[j], k * h) * h * xPrevious[k];
                     }
-                    sum2[i] += K[i][j] * h * sum1[j];
-                    sum1[j] = 0;
-                    sum3[i] += K[i][j] * h * y1[j];
-                    sum4[i] += K[i][j] * h * xp[j];
+                    sum2 += kernel.getKernel(t[i], j * h) * h * sum1;
+                    sum3 += kernel.getKernel(t[i], j * h) * h * yApprox[j];
+                    sum4 += kernel.getKernel(t[i], j * h) * h * xPrevious[j];
+                    sum1 = 0;
                 }
-                xm[i] = xp[i] - l * sum2[i] + l * sum3[i];
-                norma1 += Math.pow(sum4[i] - y1[i], 2) * h;
-                norma2 += Math.pow(xp[i], 2) * h;
-                norma3 += Math.pow(x[i] - xp[i], 2) * h;
+                x[i] = xPrevious[i] - alpha * sum2 + alpha * sum3;
+                norm1 += Math.pow(sum4 - yApprox[i], 2) * h;
+                norm2 += Math.pow(x[i], 2) * h;
+                norm3 += Math.pow(xExact[i] - x[i], 2) * h;
             }
             n++;
-        } while (Math.pow(norma1, 1. / 2) > 1.5 * delta);
-
-        //  System.out.println("******************************Метод X(n+1) ********************************");
-        //  System.out.println("Узлы t[i]" + "\t" + "Правые части y[i]" + "\t" + "Точные решения x[i]" + "\t" + "Приближённые решения x*[i]");
-        result = new ResultTable(t, y, x, xm, Math.pow(norma1, 1. / 2), Math.pow(norma2, 1. / 2), Math.pow(norma3, 1. / 2));
-//        for (int i = 0; i < m; i++) {
-//            System.out.println(t[i] + "\t\t" + y[i] + "\t" + x[i] + "\t\t\t" + xm[i]);
-//        }
-//        System.out.println("Количество итераций = " + n);
-//        System.out.println("норма 1 = " + Math.pow(norma1, 1. / 2));
-//        System.out.println("норма 2 = " + Math.pow(norma2, 1. / 2));
-//        System.out.println("норма 3 = " + Math.pow(norma3, 1. / 2));
-
+        } while (Math.pow(norm1, 1. / 2) > 1.5 * delta);
+        result = new ResultTable(t, y, xExact, x, Math.pow(norm1, 1. / 2), Math.pow(norm2, 1. / 2), Math.pow(norm3, 1. / 2), n);
     }
 
+    private void setY(Y yModel) {
+        for (int i = 0; i < m; i++)
+            y[i] = yModel.getY(t[i]);
+    }
+
+    private void setXExact() {
+        for (int i = 0; i < m; i++) {
+            xExact[i] = xModel.getX(t[i]);
+        }
+    }
+
+    private void setT() {
+        for (int i = 0; i < m; i++) {
+            t[i] = h + i * h;
+        }
+    }
 
     @Override
-    public void calculate(Kernel kernel, X x, Y y, Options options) {
+    public void calculate(Kernel kernel, X xModel, Y yModel, Options options) {
         this.delta = options.getDelta();
-        //this.K = kernel;
-        //this.x = x;
-        //this.y = y;
-        //yApproximate(k);
-        //firstMethod(k);
-
+        this.kernel = kernel;
+        this.xModel = xModel;
+        setXExact();
+        if (yModel.isExist()) {
+            setY(yModel);
+        } else {
+            new RightRectangles().getRightPart(kernel, xModel, y, m, h);
+        }
+        yApproximate();
+        solutionMethod();
     }
 
     @Override
